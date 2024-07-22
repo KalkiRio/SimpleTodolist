@@ -25,13 +25,25 @@ body {
 }
 
 h1 {
+    margin-bottom: 0.5rem;
+    font-family: cursive;
+    padding:0;
+}
+
+h2{
+
+    font-size: 1rem;
     margin-bottom: 1rem;
+    color: grey;
+    font-family: monospace;
 }
 
 .input-container {
+
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 #task-input {
@@ -96,4 +108,17 @@ h1 {
     .container {
         width: 95%;
     }
+}
+/* Add this to your styles.css or in a <style> tag in your HTML */
+#clear-all-btn {
+    background-color: #ff6347; /* Red color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+#clear-all-btn:hover{
+    background-color:#f89a8a;
 }
