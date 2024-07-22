@@ -1,15 +1,13 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const taskInput = document.getElementById('task-input');
     const addTaskBtn = document.getElementById('add-task-btn');
     const clearAllBtn = document.getElementById('clear-all-btn'); // New button
     const taskList = document.getElementById('task-list');
 
-
+    // Initialize the todos array from local storage
     let todos = JSON.parse(localStorage.getItem('tasks')) || [];
 
-
+    // Populate UI with existing tasks
     todos.forEach(todo => {
         createTaskElement(todo);
     });
@@ -28,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (taskText) {
             createTaskElement(taskText);
 
-
+            // Add to the todos array
             todos.push(taskText);
 
-
+            // Update local storage
             localStorage.setItem('tasks', JSON.stringify(todos));
 
             taskInput.value = '';
